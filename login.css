@@ -1,0 +1,146 @@
+.loginheader{
+    background-color:  lightcyan;
+    width: 500px;
+    height: 65px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+}
+.LOGO{
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    width: 150px;
+    height: 60px;
+}
+
+.logininput{
+    margin-top: 0;
+    background-color: lightcyan;
+    width: 700px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20;
+    border-radius: 20px;
+
+}
+.emailInput , .passwordInput{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.emailInput label, .passwordInput label {
+    width: 120px; 
+    margin-right: 10px; 
+    text-align: right; 
+}
+
+.email , .password{
+    height: 30px;
+    width: 500px;
+    font-size: 14pt;
+}
+
+.fastlogin{
+    display: flex;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+.fastlogin img{
+    width: 50px;
+    height: 50px;
+}
+
+.fb, .google, .twitter, .apple{
+    background-color: #316FF6;
+    width: 170px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
+.google{
+    background-color: white;
+}
+
+.twitter{
+    background-color: grey;
+}
+
+.apple{
+    background-color: black;
+}
+
+.fastlogin img{
+    width: 50px;
+    height: 50px;
+}
+
+.remember, .remember label{
+    margin-top: 30px;
+    margin-left: 150px;
+}
+
+.loginbutton,.toregister{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 500px;
+    height: 65px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    display: block;
+}
+
+.loginbutton{
+    background-color: lightblue;
+}
+.toregister{
+    margin-top: 50px;
+    background-color: #ADD8E6;
+    text-decoration: none;
+}
+
+.fgpassword{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+body {
+    width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 20px;  
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-color: lightcyan;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    border-radius: 20px; 
+    z-index: -1;
+}
+
+
