@@ -1,4 +1,4 @@
-.loginheader{
+.registerheader{
     background-color:  lightcyan;
     width: 500px;
     height: 65px;
@@ -19,24 +19,22 @@
     height: 60px;
 }
 
-.logininput{
-    margin-top: 0;
+.registerinput{
+    margin-top: -20px;
     background-color: lightcyan;
     width: 700px;
     height: 160px;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 20;
     border-radius: 20px;
 
 }
-.emailInput , .passwordInput, .dob{
+.emailInput , .passwordInput, .passwordInput2, .dob{
     padding-top: 30px;
     display: flex;
     align-items: center;
     border-radius: 10px;
 }
-.emailInput label, .passwordInput label, .dob label{
+.emailInput label, .passwordInput label, .passwordInput2 label, .dob label{
     width: 120px; 
     margin-right: 10px; 
     text-align: right; 
@@ -51,8 +49,14 @@
 
 .email , .password{
     height: 30px;
-    width: 500px;
+    width: 450px;
     font-size: 14pt;
+}
+
+#message1, #message2, #message3{
+    font-size: 16px;
+    width: 100px;
+    margin-left: 15px;
 }
 
 .fastlogin{
@@ -60,7 +64,7 @@
     width: 700px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 175px;
+    margin-top: 200px;
     justify-content: space-evenly;
 }
 .fastlogin img{
@@ -89,12 +93,12 @@
 }
 
 
-.tns, .tns label, .notification ,.notification label{
+.tnc, .tnc label, .notification ,.notification label{
     margin-top: 35px;
-    margin-left: 150px;
+    margin-left: 140px;
 }
 
-.loginbutton,.toregister{
+.registerbutton,.login{
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -106,10 +110,11 @@
     display: block;
 }
 
-.loginbutton{
+.registerbutton{
     background-color: lightblue;
+    text-decoration: none;
 }
-.toregister{
+.login{
     margin-top: 50px;
     background-color: #ADD8E6;
     text-decoration: none;
@@ -146,4 +151,42 @@ body::before {
     z-index: -1;
 }
 
+@media screen and (max-width: 576px){
+	body{
+		width: 80%;
+	}
+	
+	.registerheader{
+		width: 100px;
+	}
+	
+	.registerinput{
+		width: 100%;
+	}
+	
+	.passwordInput{
+		margin-top: 2%;
+	}
+	
+	.email, .password{
+		width: 200px;
+	}
 
+	.fastlogin{
+		width: 100px;
+		margin-top: 50%;
+	}
+	
+	.fb, .google, .twitter, .apple{
+		width: 100%;
+	}
+	
+	.remember, .remember label{
+		margin-left: 20%;
+	}
+	
+	.login, .registerbutton{
+		width: 100%;
+	}
+	
+}

@@ -5,20 +5,23 @@
     </header>
     <body>
         <a href="index.html"><img src="LOGO.svg" class="LOGO"></a>
-        <header class="loginheader">REGISTER</header>
-        <section class="logininput">
+        <header class="registerheader">REGISTER</header>
+        <section class="registerinput">
             <section class="emailInput">
                 <label for="email">Email:</label>
                 <input type="email" placeholder="Enter your email" name="email" class="email" required>
+                <span id="message1" style="color: red;"></span>
             </section>
 
             <section class="passwordInput">
                 <label for="password">Password:</label>
-                <input type="password" placeholder="Enter your password" name="password" class="password" required>
+                <input type="password" placeholder="Enter your password" name="password" class="password" id="password1" required>
+                <span id="message2" style="color: red;"></span>
             </section>
             <section class="passwordInput">
                 <label for="password">Confirm Password:</label>
-                <input type="password" placeholder="Enter your password again" name="password" class="password" required>
+                <input type="password" placeholder="Enter password again" name="password" class="password" id="password2" required>
+                <span id="message3" style="color: red;"></span>
             </section>
             <section class="dob">
                 <label for="date">Date of Birth:</label>
@@ -33,10 +36,11 @@
         </section>
 		<input type="checkbox" class="notification" name="notification">
 		<label for="notification">Notification for news update</label>
-        <input type="checkbox" class="tns" name="tns">
-        <label for="tns">Term and Service</label>
-        <button class="loginbutton">REGISTER</button>
-        <a href="login.html" class="toregister"><button class="toregister">Have an account?</button></a>
+        <input type="checkbox" class="tnc" name="tnc">
+        <label for="tnc">Term and Conditions</label>
+        <a href="index.html" class="registerbutton"><button class="registerbutton">REGISTER</button></a>
+        <a href="login.html" class="login"><button class="login">Have an account?</button></a>
         <button class="fgpassword">Forgot password?</button>
+        <script src="register.js"></script>
     </body>
 </html>

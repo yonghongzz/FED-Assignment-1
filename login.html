@@ -3,6 +3,7 @@
         <title>LOGIN Page</title>
         <link rel="stylesheet" href="login.css">
         
+        
     </header>
     <body>
         <a href="index.html"><img src="LOGO.svg" class="LOGO"></a>
@@ -11,6 +12,7 @@
             <section class="emailInput">
                 <label for="email">Email:</label>
                 <input type="email" placeholder="Enter your email" name="email" class="email" required>
+                <span id="message" style="color: red;"></span>
             </section>
 
             <section class="passwordInput">
@@ -26,8 +28,9 @@
         </section>
         <input type="checkbox" class="remember" name="remember">
         <label for="remember">Remember me</label>
-        <button class="loginbutton">LOGIN</button>
+        <a href="index.html" class="loginbutton"><button class="loginbutton">LOGIN</button></a>
         <a href="register.html" class="toregister"><button class="toregister">Don't have an account?</button></a>
         <button class="fgpassword">Forgot password?</button>
+        <script src="login.js"></script>
     </body>
 </html>
