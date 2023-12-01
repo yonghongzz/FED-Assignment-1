@@ -19,3 +19,5 @@ JavaScript features include:
 •	Input validation for login and register, for email, it requires user to input regex format and
   for password, it required user to input alphanumeric password and for confirm password, it requires
   user to input the same password.
+
+Github link: https://github.com/yonghongzz/FED-Assignment-1.git
