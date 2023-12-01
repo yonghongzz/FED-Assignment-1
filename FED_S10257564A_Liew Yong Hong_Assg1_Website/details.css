@@ -1,0 +1,411 @@
+/*
+The content outside of the @media is for the desktop view
+*/
+
+/*
+Create a header container containing the LOGO, searchbar,
+favourite icon, cart icon and the personal info icon.
+Make its position to relative for the element inside
+*/
+.header-container{
+    display: flex;
+    position: relative;
+    background-color: grey;
+}
+
+/*
+Set the background color, width and height and the border-radius to 15px
+*/
+.LOGO{
+    background-color: lightblue;
+    width: 200px;
+    height: 65px;
+    border-radius: 15px; 
+}
+
+/*
+Set the image width,height and border-radius
+*/
+.LOGO img{
+    width: 200px;
+    height: 65px;
+    border-radius: 15px;
+}
+
+/*
+Change it to display:flex to create a flex container for flex layout
+align the item at the center.
+*/
+.search{
+    display: flex;
+    align-items: center;
+    margin-left: 100px; 
+}
+
+/*
+Set the position to absolute so that it is over the searchbar
+and z-index to 2 (1 more than the searchbar z-index)
+*/
+.searchicon{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    margin-left: 250px;
+    z-index: 2;
+}
+
+/*
+Set the position to relative to work with the absolute position of searchicon
+make its z-index to 1 (1 less than the searchicon z-index)
+*/
+.searchbar{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 15px;
+    border-radius: 15px;  
+    border: 1px solid lightblue;
+    z-index: 1;
+}
+
+/*
+Set the position to relative and make the picture appear at the center by using justify-content
+make it display: flex for a flex-container
+*/
+.favourite, .cart{
+    background-color: lightblue;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    align-items: center;
+    margin-left: auto;
+	margin-right: 50px;
+	border-radius: 10px;
+	justify-content: center;
+	display: flex;
+}
+
+.favourite img,.cart img{
+	width: 50px;
+	height: 50px;
+}
+
+/*
+Set it to relative and make the icon to appear at the end
+*/
+.userinfo{
+    background-color: lightblue;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    margin-left: auto;
+	border-radius: 10px;
+}
+
+/*
+Set the dropdown display to none to not show before it is hovered
+set the text-decoration to none so that it don't have the
+underlined for login and register button
+set the text to bold and align at the center
+*/
+.userinfoDropdown{
+    display: none;
+    position: absolute;
+    background-color: lightgreen;
+    width: 130px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    border-bottom: 30px;
+    border-top: 0px;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/*
+Adjust logindropdown and register dropdown to where I want it to be
+*/
+.loginDropdown{
+    left: -65px;
+    top: 65px;
+    color: blue;
+	border-radius: 10px;
+}
+
+.registerDropdown{
+    left: -65px;
+    top: 105px;
+    color: blue;
+	border-radius: 10px;
+}
+
+/* When user hover the userinfo, the dropdown will show */
+.userinfo:hover .userinfoDropdown {
+    display: block;
+}
+
+/* Set the icon container to at the end of the page and flex-container */
+.headerend-container{
+    margin-left: auto;
+    display: flex;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Set it to space-evenly so they are equally spaced on the catblock */
+.catblock{
+	display: flex;
+	background-color: #EFEFEF;
+	justify-content: space-evenly;
+	height: 95px;
+	background-color: #B06F70;
+	border-radius: 0;
+}
+
+/* Make the block for category relative for the next part */
+.category{
+	border-radius: 5px;
+	position: relative;
+    background-color: lightblue;
+	width: 150px;
+	height: 55px;
+	text-align: center;
+	line-height: 55px;
+}
+
+/* Make a line separating each category after the category name but not the last one
+   Make it absolute to work with category block so it can be over it and
+   adjust where it placed */
+.catblock .category:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    height: 55px;
+    width: 5px;
+    background-color: #6FECCE;
+    left: 210px;
+    top: 0;
+}
+
+/* Make it flex display so the detail will be on the same line */
+.bookdetail{
+    display: flex;
+	height: 670px;
+}
+
+.bookdetail .image{
+    margin-top: 30px;
+    margin-left: 130px;
+	height: 640px;
+}
+
+.name{
+	margin-left: 125px;
+	margin-top: 50px;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.author{
+	margin-top: 100px;
+	margin-left: 125px;
+	font-size: 23px;
+}
+
+.price{
+	margin-top: 50px;
+	margin-left: 125px;
+	font-size: 23px;
+}
+
+.fav, .buybutton{
+	width: 125px;
+	height: 70px;
+	background-color: lightblue;
+	border-radius: 15px;
+	margin-top: 20px;
+	margin-left: 125px;
+}
+
+/* Create a border around the buy button and make it inline-block so it will take one line  */
+.buybutton {
+    text-decoration: none;
+    border: 2px solid black;
+    padding-top: 20px;
+    height: 45px;
+    text-align: center;
+    display: inline-block;
+}
+
+.bookdetail2{
+	width: 380px;
+	margin-left: 125px;
+	margin-top: 30px;
+	border-radius: 10px;
+}
+
+/* Make it relative for the next part */
+.content{
+	margin-left: 75px;
+	margin-top: 40px;
+	position: relative;
+	font-size: 24px;
+    background-color: aquamarine;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* This is set to absolute so it can be over the .content class and does not move other thing
+   This is the seperate line and it take up 98view */
+.content::after{
+	content: '';
+	width: 98vw;
+	height: 5px;
+	top: 50px;
+	left: -75px;
+	background-color: black;
+	position: absolute;
+}
+
+.details{
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 95%;
+    background-color: lightcyan;
+}
+
+.contentdetails .details{
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 95%;
+    background-color: lightcyan;
+}
+
+.detailblock .details{
+    background-color: lightcyan;
+}
+
+.contentdetails{
+    background-color: antiquewhite;
+	border-radius: 10px;
+}
+
+body{
+    background-color: #C7FFB0;
+}
+
+/* The below @media is for mobile view */
+@media screen and (max-width: 576px){
+	/* Set the width using % in mobile view as mobile view can be vary 
+	This is most likely the same as laptop view, just adjusting the size and where to placed the block*/
+    .LOGO{
+        width: 25%;
+    }
+
+    .LOGO img{
+		height: 100%;
+	}
+
+    .search{
+        margin-left: 5%;
+		max-width: 35%;
+    }
+
+    .searchicon{
+        margin-left: 25%;
+    }
+
+    .searchbar{
+        padding-left: 10%;
+        margin-left: 5%;
+    }
+
+	.headerend-container{
+		max-width: 30%;
+	}
+
+	.favourite, .cart{
+    	width: 30%;
+    	height: 70%;
+		margin-right: 3%;
+		margin-top: 5%;
+	}
+
+	.userinfo{
+    	width: 30%;
+    	height: 70%;
+		margin-top: 5%;
+	}
+
+    .loginDropdown{
+		top: 45px;
+		left: -165%;
+	}
+	
+	.registerDropdown{
+		top: 90px;
+		left: -165%;
+	}
+	
+	.userinfoDropdown{
+		padding-top: 15px;
+	}
+
+    /* Make it relative for the next part */
+    .bookdetail{
+        height: 640px;
+        position: relative;
+    }
+    
+    /* Make it absolute so it can be placed over the .bookdetail block and does not
+       move other thing. */
+    .bookdetail .image{
+        margin-top: 10%;
+        margin-left: 5%;
+        height: 60%;
+        width: 45%;
+        position: absolute;
+    }
+    
+    /* All the below is just adjustment */
+    .name{
+        margin-left: 55%;
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .author{
+        margin-top: 30px;
+        margin-left: 55%;
+        font-size: 18px;
+    }
+    
+    .price{
+        margin-top: 50px;
+        margin-left: 55%;
+        font-size: 23px;
+    }
+    
+    .buybutton{
+        height: 8%;
+        margin-top: 5%;
+        margin-left: 60%;
+    }
+    
+    .fav{
+        margin-top: 10%;
+        margin-left: 60%;
+    }
+    
+    .bookdetail2{
+        margin-left: 2%;
+        margin-top: -10%;
+        border-radius: 10px;
+    }
+}

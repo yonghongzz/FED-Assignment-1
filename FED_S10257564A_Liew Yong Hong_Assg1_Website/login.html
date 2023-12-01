@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LOGIN Page</title>
+        <link rel="stylesheet" href="login.css">   
+    </head>
+    <body>
+        <!--Website LOGO and LOGIN text at the top of page-->
+        <a href="index.html"><img src="Image/LOGO.svg" class="LOGO" alt="logo"></a>
+        <header class="loginheader">LOGIN</header>
+
+        <!--This is login input, it require user to input for email and password for login-->
+        <section class="logininput">
+            <section class="emailInput">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter your email" name="email"  class="email" id="email" required>
+                <span id="message" style="color: red;"></span>
+            </section>
+            <section class="passwordInput">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter your password" name="password" class="password" id="password" required>
+            </section>
+        </section>
+
+        <!--This section is about fastlogin, user can press the icon below to use
+            one of the four fastlogin(facebook,google,twitter,apple) to login without
+            having an account. It will direct them to login their chosen fastlogin page-->
+        <section class="fastlogin">
+            <a href="https://www.facebook.com/" class="fb"><img src="Image/fb" class="fb" alt="fb"></a>
+            <a href="https://accounts.google.com.sg/"><img src="Image/google.png" class="google" alt="google"></a>
+            <a href="https://twitter.com/i/flow/login"><img src="Image/X.png" class="twitter" alt="twitter"></a>
+            <a href="https://appleid.apple.com/sign-in"><img src="Image/apple.png" class="apple" alt="apple"></a>
+        </section>
+
+        <!--This is the checkbox for user to tick, it will remember the user details
+            so they no need to login again next time-->
+        <input type="checkbox" class="remember" id="remember" name="remember">
+        <label for="remember">Remember me</label>
+
+        <!--The below is the Login button and no account button. Pressing Login button
+            will let you login and direct you to the homepage. Pressing no account button
+            will direct you to register page for register. There is also forgot password button-->
+        <a href="index.html" class="loginbutton">LOGIN</a>
+        <a href="register.html" class="toregister">Don't have an account?</a>
+        <button class="fgpassword">Forgot password?</button>
+        
+        <!--This is the javascript used for input validaiton. It will require user to input
+            email expression (regex) for email and show message if it is not done-->
+        <script src="login.js"></script>
+    </body>
+</html>

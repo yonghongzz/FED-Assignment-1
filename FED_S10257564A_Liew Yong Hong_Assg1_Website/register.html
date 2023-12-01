@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN Page</title>
+        <link rel="stylesheet" href="register.css">
+    </head>
+    <!--Website LOGO and LOGIN text at the top of page-->
+    <body>
+        <a href="index.html"><img src="Image/LOGO.svg" class="LOGO" alt="logo"></a>
+        <header class="registerheader">REGISTER</header>
+
+        <!--This is register input, it require user to input for email, password, confirm password and dob to register-->
+        <section class="registerinput">
+            <section class="emailInput">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter your email" name="email" class="email" id="email" required>
+                <span id="message1" style="color: red;"></span>
+            </section>
+            <section class="passwordInput">
+                <label for="password1">Password:</label>
+                <input type="password" placeholder="Enter your password" name="password" class="password" id="password1" required>
+                <span id="message2" style="color: red;"></span>
+            </section>
+            <section class="passwordInput">
+                <label for="password2">Confirm Password:</label>
+                <input type="password" placeholder="Enter password again" name="password" class="password" id="password2" required>
+                <span id="message3" style="color: red;"></span>
+            </section>
+            <section class="dob">
+                <label for="date">Date of Birth:</label>
+                <input type="date" class="dob" id="date" required>
+            </section>
+        </section>
+
+        <!--This section is about fastlogin, user can press the icon below to use
+            one of the four fastlogin(facebook,google,twitter,apple) to login without
+            having an account. It will direct them to login their chosen fastlogin page-->
+        <section class="fastlogin">
+            <a href="https://www.facebook.com/"><img src="Image/fb" class="fb" alt="fb"></a>
+            <a href="https://accounts.google.com.sg/"><img src="Image/google.png" class="google" alt="google"></a>
+            <a href="https://twitter.com/i/flow/login"><img src="Image/X.png" class="twitter" alt="twitter"></a>
+            <a href="https://appleid.apple.com/sign-in"><img src="Image/apple.png" class="apple" alt="apple"></a>
+        </section>
+
+        <!--This is the checkbox for user to tick if they are willing to accept the term and condition
+            and allow the website to send notification to the email they registered-->
+		<input type="checkbox" class="notification" name="notification" id="notification">
+		<label for="notification">Notification for news update</label>
+        <input type="checkbox" class="tnc" name="tnc" id="tnc" required>
+        <label for="tnc">Term and Conditions</label>
+
+        <!--The below is the Register button and have an account button. Pressing Register button
+            will let you register and direct you to the homepage. Pressing have an account button
+            will direct you to login page for login. There is also forgot password button-->
+        <a href="index.html" class="registerbutton">REGISTER</a>
+        <a href="login.html" class="login">Have an account?</a>
+        <button class="fgpassword">Forgot password?</button>
+
+        <!--This is the javascript used for input validaiton. It will require user to input
+            email expression (regex), alphanumeric for password and ensure that the confirm
+            password is the same as the password they input and show message if it is not done-->
+        <script src="register.js"></script>
+    </body>
+</html>

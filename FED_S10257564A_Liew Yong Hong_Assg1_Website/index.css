@@ -1,0 +1,493 @@
+/*
+The content outside of the @media is for the desktop view
+*/
+
+/*
+Create a header container containing the LOGO, searchbar,
+favourite icon, cart icon and the personal info icon.
+Make its position to relative for the element inside
+*/
+.header-container{
+    display: flex;
+    position: relative;
+    background-color: grey;
+}
+
+/*
+Set the background color, width and height and the border-radius to 15px
+*/
+.LOGO{
+    background-color: lightblue;
+    width: 200px;
+    height: 65px;
+    border-radius: 15px; 
+}
+
+/*
+Set the image width,height and border-radius
+*/
+.LOGO img{
+    width: 200px;
+    height: 65px;
+    border-radius: 15px;
+}
+
+/*
+Change it to display:flex to create a flex container for flex layout
+align the item at the center.
+*/
+.search{
+    display: flex;
+    align-items: center;
+    margin-left: 100px; 
+}
+
+/*
+Set the position to absolute so that it is over the searchbar
+and z-index to 2 (1 more than the searchbar z-index)
+*/
+.searchicon{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    margin-left: 250px;
+    z-index: 2;
+}
+
+/*
+Set the position to relative to work with the absolute position of searchicon
+make its z-index to 1 (1 less than the searchicon z-index)
+*/
+.searchbar{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 15px;
+    border-radius: 15px;  
+    border: 1px solid lightblue;
+    z-index: 1;
+}
+
+/*
+Set the position to relative and make the picture appear at the center by using justify-content
+make it display: flex for a flex-container
+*/
+.favourite, .cart{
+    background-color: lightblue;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    align-items: center;
+    margin-left: auto;
+	margin-right: 50px;
+	border-radius: 10px;
+	justify-content: center;
+	display: flex;
+}
+
+.favourite img,.cart img{
+	width: 50px;
+	height: 50px;
+}
+
+/*
+Set it to relative and make the icon to appear at the end
+*/
+.userinfo{
+    background-color: lightblue;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    margin-left: auto;
+	border-radius: 10px;
+}
+
+/*
+Set the dropdown display to none to not show before it is hovered
+set the text-decoration to none so that it don't have the
+underlined for login and register button
+set the text to bold and align at the center
+*/
+.userinfoDropdown{
+    display: none;
+    position: absolute;
+    background-color: lightgreen;
+    width: 130px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    border-bottom: 30px;
+    border-top: 0px;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/*
+Adjust logindropdown and register dropdown to where I want it to be
+*/
+.loginDropdown{
+    left: -65px;
+    top: 65px;
+    color: blue;
+	border-radius: 10px;
+}
+
+.registerDropdown{
+    left: -65px;
+    top: 105px;
+    color: blue;
+	border-radius: 10px;
+}
+
+/* When user hover the userinfo, the dropdown will show */
+.userinfo:hover .userinfoDropdown {
+    display: block;
+}
+
+/* Set the icon container to at the end of the page and flex-container */
+.headerend-container{
+    margin-left: auto;
+    display: flex;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Set it to space-evenly so they are equally spaced on the catblock */
+.catblock{
+	display: flex;
+	background-color: #EFEFEF;
+	justify-content: space-evenly;
+	height: 95px;
+	background-color: #B06F70;
+	border-radius: 0;
+}
+
+/* Make the block for category relative for the next part */
+.category{
+	border-radius: 5px;
+	position: relative;
+}
+
+/* Make a line separating each category after the category name but not the last one
+   Make it absolute to work with category block so it can be over it and
+   adjust where it placed */
+.catblock .category:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    height: 55px;
+    width: 5px;
+    background-color: #6FECCE;
+    left: 210px;
+    top: 0;
+}
+
+/* This is to make a separator to separate each content (comingsoon, hotsell and bestsell) */
+.hotsell-container::before, .bestsell-container::before{
+	content: '';
+	height: 5px;
+	display: block;
+	width: 100%;
+	background-color: #0D0D0D;	
+}
+
+/* This block is for the Title of each content (Coming soon, Hot sell, Best sell)
+and align the word to the center of the block */
+.comingsoon, .hotsell, .bestsell{
+	background-color: lightskyblue;
+	width: 200px;
+	height: 40px;
+	margin-top: 50px;
+	padding: 20px 20px 3px 10px;
+	text-align: center;
+	font-size: 16px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* Make the imageblock to be flex-container so the image will be same line
+   Set it to the center of the webpage by using justify-content: center */
+.imageblock{
+	display: flex;
+}
+
+.comingsoon-container .imageblock{
+	justify-content: space-between;
+	margin: 0 25px;
+}
+
+/* Set it to flex container so the price and icon will be on the same line
+Add a border around the price box but not at the top */
+.pricebox{
+	display: flex;
+	background-color: aqua;
+	margin-top: -5px;
+	border-right: 3px solid grey;
+	border-left: 3px solid grey;
+	border-bottom: 3px solid grey;
+}
+
+/* This is the favourite icon and cart icon beside the price, together in the pricebox */
+.icon{
+	margin-left: 8px;
+    width: 45px;
+	height: 45px;
+	padding: 10px 8px 0 0;
+}
+
+/* The few block below is to adjust the text and image */
+.price{
+	font-size: 18px;
+    width: 105px;
+	margin-left: 10px;
+}
+
+.comingsoon-container img{
+    width: 200px;   
+}
+
+.hotsell-container, .bestsell-container{
+	margin-top: 50px;
+}
+
+/* Adjust only the image in hotsell-container but not the icon */
+.hotsell-container img:not(.icon) {
+    width: 240px;
+    height: 357px;
+}
+
+.hotsell-container .imageblock{
+	justify-content:space-around;
+	margin: 0 85px;
+}
+
+/* Add a border around the image*/
+.hotsell-container img:not(.icon), .comingsoon-container img, .bestsell-container img{
+	border: 3px solid grey;
+}
+
+/*Set bestsell block to display flex so it will be on the same line*/
+.bestsell-block{
+    display: flex;
+}
+
+/* Adjust the bestsell-book and place a solid block right after
+the block to kind of separate them to have better view */
+.bestsell-book{
+	background-color: cadetblue;
+	width: 480px;
+    border-right: 5px solid white;
+}
+
+.category{
+	background-color: lightblue;
+	width: 150px;
+	height: 55px;
+	text-align: center;
+	line-height: 55px;
+}
+
+.bestsell-book img{
+    margin: 20px;
+    width: 130px;
+	height: 200px;
+}
+
+/* Make the footer block to flex to that all information will be on the same line 
+Adjust the size of the end block and place a solid blakc block around it to square the end content*/
+.end{
+	margin-top: 50px;
+    display: flex;
+    background-color: lightblue;
+    height: 180px;
+    justify-content: space-evenly;
+	border-right: 5px solid black;
+	border-left: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+/* Place a solid block under every endingtitle to let them look like a Title */
+.endingtitle{
+    text-align: center;
+    border-bottom: 3px solid black;
+    font: bold;
+    font-size: 20px;
+}
+
+.member, .service{
+    text-align: center; 
+}
+
+/* This is the link to login and register, make decoration to none so it is not underlined
+and set the display to block so they will each take one line */
+.member-container a{
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: block;
+    color: black;
+}
+
+.customerservice, .aboutus, .contactus{
+	text-align: center;
+}
+
+.aboutus p{
+	max-width: 175px;
+	font-weight: bold;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+/* The below @media is for mobile view */
+@media screen and (max-width: 576px){
+	/* Set the width using % in mobile view as mobile view can be vary 
+	This is most likely the same as laptop view, just adjusting the size and where to placed the block*/
+	.LOGO{
+        width: 25%;
+
+    }
+
+	.LOGO img{
+		height: 100%;
+	}
+
+    .search{
+        margin-left: 5%;
+		max-width: 25%;
+    }
+
+    .searchicon{
+        margin-left: 25%;
+    }
+
+    .searchbar{
+        padding-left: 10%;
+        margin-left: 5%;
+    }
+
+	.headerend-container{
+		max-width: 30%;
+	}
+
+	.favourite, .cart{
+    	width: 30%;
+    	height: 70%;
+		margin-right: 3%;
+		margin-top: 5%;
+	}
+
+	.userinfo{
+    	width: 30%;
+    	height: 70%;
+		margin-top: 5%;
+	}
+
+    .loginDropdown{
+		top: 45px;
+		left: -165%;
+	}
+	
+	.registerDropdown{
+		top: 90px;
+		left: -165%;
+	}
+	
+	.userinfoDropdown{
+		padding-top: 15px;
+	}
+
+	.catblock .category{
+		width: 15%;
+		font-size: 12px;
+	}
+
+	/* This is the separate each category using a block and change the size abit from the laptop view */
+	.catblock .category:not(:last-child)::after {
+        width: 5%;
+        left: 112%;
+        top: 0;
+	}
+	
+	/* make it space-around so there is some space between each novel for mobile view
+	wrap it so it will move to the next line if not enough space */
+	.comingsoon-container .imageblock, .hotsell-container .imageblock{
+		justify-content: space-around;
+		flex-wrap: wrap;	
+	}
+
+	/* Make each picture to have margin-top 5% to make a space between picture in each line */
+	.comingsoon-container .imageblock img, .hotsell-container .imageblock img{
+		margin-top: 5%;
+	}
+
+	.comingsoon-container img{
+		width: 45%;
+	}
+
+	/* Set margin to 0 different from desktop view */
+	.hotsell-container .imageblock{
+		margin: 0;
+	}
+
+	/* Set margin to 0 different from desktop view */
+	.icon{
+		padding-top: 0;
+	}
+	
+	/* Make the bestsell-container block to have horizontal slide */
+	.bestsell-container{
+		overflow-x: auto;	
+	}
+	
+	/* Set the separate block before bestsell-container to 405% to be the same as the
+	width of bestsell-container */
+	.bestsell-container::before{
+		width: 405%;
+	}
+
+	/* set flex-grop and flex-shrink to 0 and set the bestsell-book block 
+	to take up 95 of the viewport */
+	.bestsell-book{
+		flex: 0 0 95vw;
+        height: 720px;
+	}
+
+	/* set the margin to 2.2 to make some space between each image */
+	.bestsell-book img {
+  		width: 44%; 
+        height: 38%;
+		margin: 2.2%;		
+	}
+
+	/* Set flex-wrap to wrap so the content will auto
+	 go to the next line if there is no enough space */
+	.end{
+		height: 100%;
+		flex-wrap: wrap;
+	}
+	
+	.member-container, .customerservice, .aboutus, .contactus{
+		width: 100%;
+	}
+	
+	/* Place the endingtitle at the centre by setting margin-left and margin-right to auto */
+	.endingtitle{
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* Set margin-left and right to auto to set it at the center */
+	.member-container a, .aboutus p{
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NOVEL!</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+
+    </head>
+    <body>
+        <!--
+            For some <section> element, there might be warning for lacks of heading
+            This is intended as I do not want any heading over there, it is 
+            to group all thing.I use section instead of div as the content is related.
+        -->
+        <!--
+            The header class contain the website LOGO, searchbar and favourite,
+            cart, personal info icon.
+        -->
+        <header class="header-container">
+            <!--
+            This LOGO is linked to index.html(same page) so when u press it,
+            it will reload the page.
+            -->
+            <a href="index.html" class="LOGO"><img src="Image/LOGO.svg" alt="logo"></a> 
+            
+            <section class="search">
+                <img src="Image/searchbar.png" class="searchicon" alt="icon">
+                <input type="text" class="searchbar" placeholder="Search..">
+            </section>
+            <section class="headerend-container">
+                <img src="Image/favourite.png" alt="fav icon" class="favourite">
+                <img src="Image/shopping-cart.png" alt="cart" class="cart">
+                <!--
+                    The userinfo dropdown include login and register which is linked to
+                    login.html and register.hrml
+                -->
+                <section class="userinfo"><img src="Image/person.png" alt="person">
+                    <a class="loginDropdown userinfoDropdown" href="login.html">Login</a>
+                    <a class="registerDropdown userinfoDropdown" href="register.html">Register</a>
+                </section>
+            </section>
+        </header>
+
+        <!--
+            This catblock class is the category block under the LOGO header,
+            showing all the category for the novel.
+        -->
+        <section class="catblock">
+			<h3 class="category">Fantasy</h3>
+			<h3 class="category">Science</h3>
+			<h3 class="category">Detective</h3>
+			<h3 class="category">Mystery</h3>
+			<h3 class="category">Thriller</h3>
+        </section>
+		
+        <!--
+            This comingsoon-container class contains the comingsoon novel picture
+            and it changed every 3 seconds.
+        -->
+		<article class="comingsoon-container">
+			<h4 class="comingsoon">COMING SOON</h4>
+			<section class="imageblock">
+				<img id="sliderImage1" src="Image/comingsoon1.jpg" alt="comingsoon1">	
+				<img id="sliderImage2" src="Image/comingsoon2.jpg" alt="comingsoon2">
+				<img id="sliderImage3" src="Image/comingsoon3.jpg" alt="comingsoon3">
+				<img id="sliderImage4" src="Image/comingsoon4.jpg" alt="comingsoon4">
+				<img id="sliderImage5" src="Image/comingsoon5.jpg" alt="comingsoon5">
+				<img id="sliderImage6" src="Image/comingsoon6.jpg" alt="comingsoon6">
+                <img id="sliderImage7" src="Image/comingsoon7.jpg" alt="comingsoon7">
+            </section>
+		</article>
+		
+        <!--
+            The hotsell-container contain the novel that are currently
+            on hot sell.
+        -->
+	    <article class="hotsell-container">
+		    	<h4 class="hotsell">HOT SELL</h4>
+			    <section class="imageblock">
+                    <!--
+                        Each image have their own prices,favourite icon and
+                        cart icon, and when we press the picture, it will go to
+                        their detail page which is details.html
+                    -->
+                    <!--
+                            In every pricebox, it contain price of the novel, cart icon and favourite icon
+                    -->
+				    <section class="image1">
+					    <a href="details.html"><img src="Image/fiction1.jpg" alt="fiction1"></a>
+				        <section class="pricebox">
+					        <h4 class="price">Price: $7</h4>
+		  			        <img src="Image/shopping-cart.png" class="icon" alt="icon">
+		  			        <img src="Image/favourite.png" class="icon" alt="icoo">
+                        </section>
+				    </section>
+				    <section class="image2">
+					    <img src="Image/fantasy2.jpeg" alt="fantasy2">
+				        <section class="pricebox">
+					        <h4 class="price">Price: $9.31</h4>
+		  			        <img src="Image/shopping-cart.png" class="icon" alt="icon">
+		  			        <img src="Image/favourite.png" class="icon" alt="icon">
+                        </section>
+				    </section>
+                    <section class="image3">
+					    <img src="Image/hotsell3.jpg" alt="hotsell3">
+				        <section class="pricebox">
+					        <h4 class="price">Price: $11.78</h4>
+                            <img src="Image/shopping-cart.png" class="icon" alt="icon">
+                            <img src="Image/favourite.png" class="icon" alt="icon">
+                        </section>
+                    </section>
+                    <section class="image4">
+                        <img src="Image/hotsell4.jpg" alt="hotsell4">
+                        <section class="pricebox">
+                            <h4 class="price">Price: $13.73</h4>
+                            <img src="Image/shopping-cart.png" class="icon" alt="icon">
+                            <img src="Image/favourite.png" class="icon" alt="icon">
+                        </section>
+                    </section>
+                    <section class="image5">
+                        <img src="Image/hotsell5.jpg" alt="hotsell5">
+                        <section class="pricebox">
+                            <h4 class="price">Price: $15.00</h4>
+                            <img src="Image/shopping-cart.png" class="icon" alt="icon">
+                            <img src="Image/favourite.png" class="icon" alt="icon">
+                        </section>
+                    </section>
+                </section>
+            </article>
+        
+        <!--
+            The bestsell-container include best sell novel for each
+            category and is separated.
+        -->
+		<article class="bestsell-container">
+		    <h4 class="bestsell">BEST SELL</h4>
+            <!--
+                The bestsell-block is all the novel's category
+                and they contain the picture of the book's cover
+            -->
+			<section class="bestsell-block">
+				<section class="bestsell-book">
+					<h5 class="category">ALL</h5>
+					<img src="Image/fantasy1.jpeg" alt="fantasy1">	
+                    <img src="Image/fiction1.jpg" alt="fiction1">	
+                    <img src="Image/webnovel5.jpg" alt="webnovel5">	
+                    <img src="Image/webnovel3.jpg" alt="webnovel3">
+                </section>
+                <section class="bestsell-book">
+                    <h5 class="category">FANTASY</h5>
+                    <img src="Image/fantasy1.jpeg" alt="fantasy1">
+                    <img src="Image/fantasy2.jpeg" alt="fantasy2">	
+                    <img src="Image/fantasy3.jpeg" alt="fantasy3">	
+                    <img src="Image/fantasy4.jpeg" alt="fantasy4">
+                </section>
+                <section class="bestsell-book">
+                    <h5 class="category">FICTION</h5>
+                    <img src="Image/fiction1.jpg" alt="fiction1">	
+                    <img src="Image/fiction2.jpg" alt="fiction2">	
+                    <img src="Image/fiction3.jpg" alt="fiction3">	
+                    <img src="Image/fiction4.jpg" alt="fiction4">
+                </section>
+                <section class="bestsell-book">
+                    <h5 class="category">WEBNOVEL</h5>
+                    <img src="Image/webnovel5.jpg" alt="webnovel5">	
+                    <img src="Image/webnovel2.jpg" alt="webnovel2">	
+                    <img src="Image/webnovel3.jpg" alt="webnovel3">	
+                    <img src="Image/webnovel4.jpg" alt="webnovel4">
+                </section>
+			</section>
+		</article>
+
+        <!--
+            The footer is the ending of the page and it include
+            the login,register button and other information of the website
+        -->
+        <footer class="end">
+            <!--
+                The memebr-container class is able to let us go to the 
+                login and register page
+            -->
+            <section class="member-container">
+                <h5 class="endingtitle">Member</h5>
+                <a href="register.html">JOIN US</a>
+                <a href="login.html">LOGIN</a>
+            </section>
+             <!--
+                The customer service has new notice made by the website and some FAQ
+            -->
+            <section class="customerservice">
+                <h5 class="endingtitle">Customer Service</h5>
+                <h5>NEW NOTICE</h5>
+                <h5>FAQ</h5>
+            </section>
+            <!--
+                The about us class show the details of the
+                website company
+            -->
+            <section class="aboutus">
+                <h5 class="endingtitle">About Us</h5>
+              	<p>
+					We are NOVEL! We hope to bring more interesting novel to YOU!
+				</p>
+            </section>
+            <!--
+                The contact us class has the information for us to contact the website
+            -->
+            <section class="contactus">
+                <h5 class="endingtitle">Contact Us</h5>
+                <h5>Customer Support</h5>
+                <h5>Email</h5>
+            </section>
+        </footer>	
+    </body>
+</html>
